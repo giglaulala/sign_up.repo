@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sign-up Website</title>
+</head>
+<body>
+    <img src="odin-lined.png" class="odinLogo">
+    <div class="whole-box">
+        <div class="input-box">
+            <label for="first-name">First name</label>
+            <input type="text" id="first-name" name="First-name">
+
+            <label for="last-name">Last name</label>
+            <input type="text" id="last-name" name="Last-name">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="Email">
+
+            <label for="phone-number">Phone number</label>
+            <input type="tel" id="phone-number" name="Phone-number">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="Password">
+
+            <label for="confirm-password">Confirm password</label>
+            <input type="password" id="confirm-password" name="Confirm-password">
+        </div>
+        <button id="colorButton" type="submit">Create account</button>
+    </div>
+    <script>
+        // Select the button element
+        const colorButton = document.getElementById('colorButton');
+        let originalColor = '#517a7b'; // Store the original background color
+
+        // Add an event listener for the click event
+        colorButton.addEventListener('click', function() {
+            // Change the background color of the button
+            colorButton.style.backgroundColor = 'cadetBlue';
+            // Revert back to the original color after 1 second
+            setTimeout(function() {
+                colorButton.style.backgroundColor = originalColor;
+            }, 1000);
+        });
+    </script>
+    <div class="praisePhoto">Photo by Joshua Sortino on Unsplash</div>
+</body>
+</html>
